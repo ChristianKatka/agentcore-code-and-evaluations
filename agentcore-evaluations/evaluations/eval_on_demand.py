@@ -2,20 +2,13 @@ from bedrock_agentcore_starter_toolkit import Evaluation
 from boto3.session import Session
 import sys
 
-# Initialize boto session
-boto_session = Session()
-region = boto_session.region_name
 
-# Initialize Evaluation client
+region = "us-east-1"
+agent_id = "strands_claude_getting_started-p5llts4z2q"
+session_id = "123456789"
+
 eval_client = Evaluation(region=region)
 
-# Get agent_id and session_id from command line or prompt
-if len(sys.argv) > 2:
-    agent_id = sys.argv[1]
-    session_id = sys.argv[2]
-else:
-    agent_id = input("Enter your Agent ID: ")
-    session_id = input("Enter your Session ID: ")
 
 print(f"Running on-demand evaluation for Agent: {agent_id}")
 print(f"Session: {session_id}")

@@ -1,7 +1,8 @@
 ```bash
 python3.12 -m venv venv
 source venv/bin/activate
-pip install -r src/requirements.txt
-python local_agents
+pip install -r requirements.txt
+python deploy.py
+python invoke_with_boto3.py
 deactivate
 ```

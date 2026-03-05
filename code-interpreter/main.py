@@ -73,6 +73,7 @@ def main():
     )
     
     query = "Can all the planets in the solar system fit between the earth and moon?"
+    # query = "How long would it take light to travel from the Sun to each planet?"
     
     # Agent Invocation and Response Processing
     print(f"\nQuery: {query}\n")

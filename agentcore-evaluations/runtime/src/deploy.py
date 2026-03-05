@@ -1,9 +1,8 @@
 from bedrock_agentcore_starter_toolkit import Runtime
 from boto3.session import Session
 
-# Initialize boto session
-boto_session = Session()
-region = boto_session.region_name
+
+region = "us-east-1"
 
 # Initialize AgentCore Runtime
 agentcore_runtime = Runtime()
@@ -17,13 +16,7 @@ response = agentcore_runtime.configure(
     auto_create_ecr=True,
     requirements_file="requirements.txt",
     region=region,
-    agent_name=agent_name,
-    authorizer_configuration={
-        "customJWTAuthorizer": {
-            "discoveryUrl": discovery_url,
-            "allowedClients": [client_id],
-        }
-    },
+    agent_name=agent_name
 )
 
 

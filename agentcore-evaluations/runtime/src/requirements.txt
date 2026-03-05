@@ -1,6 +1,8 @@
 strands-agents
 strands-agents-tools
-uv
 boto3
 bedrock-agentcore<=0.1.5
 bedrock-agentcore-starter-toolkit==0.1.14
+requests==2.32.3
+urllib3==2.2.3
+charset-normalizer==3.4.4

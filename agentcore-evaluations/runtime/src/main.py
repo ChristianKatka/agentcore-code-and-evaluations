@@ -6,7 +6,7 @@ from bedrock_agentcore.runtime import BedrockAgentCoreApp
 # Initialize the AgentCore Runtime app
 app = BedrockAgentCoreApp()
 
-# Create a custom tool 
+# Custom tool 
 @tool
 def weather():
     """ Get weather """ 
@@ -14,7 +14,7 @@ def weather():
 
 
 # Initialize the Bedrock model
-model_id = "global.anthropic.claude-haiku-4-5-20251001-v1:0"
+model_id = "amazon.nova-pro-v1:0"
 model = BedrockModel(
     model_id=model_id,
 )

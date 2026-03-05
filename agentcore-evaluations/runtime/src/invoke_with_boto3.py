@@ -2,9 +2,7 @@ import boto3
 import json
 from boto3.session import Session
 
-# You need to set these values from your deployment
-# Get them from deploy.py output or check_status.py
-AGENT_ARN = input("Enter your Agent ARN: ")
+AGENT_ARN = "arn:aws:bedrock-agentcore:us-east-1:297521001857:runtime/strands_claude_getting_started-p5llts4z2q"
 
 boto_session = Session()
 region = boto_session.region_name
